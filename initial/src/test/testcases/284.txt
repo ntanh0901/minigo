@@ -1,0 +1,1 @@
+func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; } ; } ; } ;

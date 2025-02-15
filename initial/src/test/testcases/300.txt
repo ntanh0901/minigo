@@ -1,0 +1,1 @@
+func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; func garply() { var o int ; var p int ; } ; } ; } ; } ; } ; } ; } ; } ;
