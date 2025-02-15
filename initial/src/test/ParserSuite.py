@@ -1,3 +1,4 @@
+```python name=ParserSuite.py
 import unittest
 from TestUtils import TestParser
 
@@ -452,57 +453,57 @@ class ParserSuite(unittest.TestCase):
         self.assertTrue(TestParser.checkParser(input, expect, 289))
 
     def test_valid_funcdecl_41(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; } ; } ; }[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 290))
 
     def test_valid_funcdecl_42(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 291))
 
     def test_valid_funcdecl_43(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 292))
 
     def test_valid_funcdecl_44(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 293))
 
     def test_valid_funcdecl_45(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 294))
 
     def test_valid_funcdecl_46(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 295))
 
     def test_valid_funcdecl_47(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 296))
 
     def test_valid_funcdecl_48(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 297))
 
     def test_valid_funcdecl_49(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; func garply() { } ; } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 298))
 
     def test_valid_funcdecl_50(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; func garply() { var o int ; } ; } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 299))
 
     def test_valid_funcdecl_51(self):
-        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; func garply() { var o int ; var p int ; } ; } ; } ; } ; } ; } ; } ; } ;"
+        input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int[...]"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 300))
 
