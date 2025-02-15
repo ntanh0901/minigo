@@ -505,4 +505,248 @@ class ParserSuite(unittest.TestCase):
         input = "func main() { var a int ; var b int ; func foo() { var c int ; var d int ; func bar() { var e int ; var f int ; func baz() { var g int ; var h int ; func qux() { var i int ; var j int ; func corge() { var k int ; var l int ; func grault() { var m int ; var n int ; func garply() { var o int ; var p int ; } ; } ; } ; } ; } ; } ; } ; } ;"
         expect = "successful"
         self.assertTrue(TestParser.checkParser(input, expect, 300))
-    
+
+    def test_valid_funcdecl_52(self):
+        input = "func test52() { } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 301))
+
+    def test_valid_funcdecl_53(self):
+        input = "func test53() { var alpha int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 302))
+
+    def test_valid_funcdecl_54(self):
+        input = "func test54() { func nested15() { } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 303))
+
+    def test_valid_funcdecl_55(self):
+        input = "func test55() { var a int ; var b int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 304))
+
+    def test_valid_funcdecl_56(self):
+        input = "func test56() { func foo() { var x int ; } ; var y int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 305))
+
+    def test_valid_funcdecl_57(self):
+        input = "func test57() { var a int ; func bar() { var b int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 306))
+
+    def test_valid_funcdecl_58(self):
+        input = "func test58() { func bar() { func baz() { } ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 307))
+
+    def test_valid_funcdecl_59(self):
+        input = "func test59() { var c int ; func bar() { func baz() { } ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 308))
+
+    def test_valid_funcdecl_60(self):
+        input = "func test60() { var c int ; var d int ; var e int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 309))
+
+    def test_valid_funcdecl_61(self):
+        input = "func test61() { func foo() { var i int ; var j int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 310))
+
+    def test_valid_funcdecl_62(self):
+        input = "func test62() { var a int ; var b int ; func foo() { var c int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 311))
+
+    def test_valid_funcdecl_63(self):
+        input = "func test63() { var b int ; func foo() { func bar() { var c int ; } ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 312))
+
+    def test_valid_funcdecl_64(self):
+        input = "func test64() { } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 313))
+
+    def test_valid_funcdecl_65(self):
+        input = "func test65() { var x int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 314))
+
+    def test_valid_funcdecl_66(self):
+        input = "func test66() { var longVarName int ; var shortVarName int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 315))
+
+    def test_valid_funcdecl_67(self):
+        input = "func test67() { func inFunc() { var subVar int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 316))
+
+    def test_valid_funcdecl_68(self):
+        input = "func test68() { var a int ; var b int ; var c int ; func nestedFunc() { } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 317))
+
+    def test_valid_funcdecl_69(self):
+        input = "func test69() { func alpha() { var a int ; } ; func beta() { var b int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 318))
+
+    def test_valid_funcdecl_70(self):
+        input = "func test70() { var a int ; var b int ; func alpha() { var c int ; } ; func beta() {} ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 319))
+
+    def test_valid_funcdecl_71(self):
+        input = "func test71() { var a int ; func alpha() { var c int ; } ; var b int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 320))
+
+    def test_valid_funcdecl_72(self):
+        input = "func test72() { } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 321))
+
+    def test_valid_funcdecl_73(self):
+        input = "func test73() { var a int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 322))
+
+    def test_valid_funcdecl_74(self):
+        input = "func test74() { var x int ; var y int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 323))
+
+    def test_valid_funcdecl_75(self):
+        input = "func test75() { func foo() {} ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 324))
+
+    def test_valid_funcdecl_76(self):
+        input = "func test76() { var x int ; func foo() { var y int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 325))
+
+    def test_valid_funcdecl_77(self):
+        input = "func test77() { func foo() { func bar() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 326))
+
+    def test_valid_funcdecl_78(self):
+        input = "func test78() { var x int ; var y int ; var z int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 327))
+
+    def test_valid_funcdecl_79(self):
+        input = "func test79() { var a int ; func foo() { var b int ; } ; var c int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 328))
+
+    def test_valid_funcdecl_80(self):
+        input = "func test80() { func foo() { var x int ; var y int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 329))
+
+    def test_valid_funcdecl_81(self):
+        input = "func test81() { var a int ; func nested() { var b int ; func deeper() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 330))
+
+    def test_valid_funcdecl_82(self):
+        input = "func test82() { var alpha int ; var beta int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 331))
+
+    def test_valid_funcdecl_83(self):
+        input = "func test83() { func alpha() { } ; func beta() { } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 332))
+
+    def test_valid_funcdecl_84(self):
+        input = "func test84() { var a int ; func alpha() { func gamma() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 333))
+
+    def test_valid_funcdecl_85(self):
+        input = "func test85() { func alpha() { var x int ; var y int ; } ; var z int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 334))
+
+    def test_valid_funcdecl_86(self):
+        input = "func test86() { var a int ; var b int ; var c int ; var d int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 335))
+
+    def test_valid_funcdecl_87(self):
+        input = "func test87() { var a int ; func alpha() { } ; func beta() { var b int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 336))
+
+    def test_valid_funcdecl_88(self):
+        input = "func test88() { func alpha() {} ; func beta() {} ; func gamma() {} ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 337))
+
+    def test_valid_funcdecl_89(self):
+        input = "func test89() { var a int ; func alpha() { var b int ; func beta() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 338))
+
+    def test_valid_funcdecl_90(self):
+        input = "func test90() { /* nested function calls for test */ func alpha() {} ; var x int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 339))
+
+    def test_valid_funcdecl_91(self):
+        input = "func test91() { var a int ; var b int ; func alpha() { var c int ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 340))
+
+    def test_valid_funcdecl_92(self):
+        input = "func test92() { } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 341))
+
+    def test_valid_funcdecl_93(self):
+        input = "func test93(){var a int ;} ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 342))
+
+    def test_valid_funcdecl_94(self):
+        input = "func test94() { var a int ; func nested() { } ; var b int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 343))
+
+    def test_valid_funcdecl_95(self):
+        input = "func test95() { var a int ; /* comment */ } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 344))
+
+    def test_valid_funcdecl_96(self):
+        input = "func test96() { func nested() {} ; /* another comment */ var b int ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 345))
+
+    def test_valid_funcdecl_97(self):
+        input = "func test97() { var a int ; func nested1() { func nested2() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 346))
+
+    def test_valid_funcdecl_98(self):
+        input = "func test98() { var a int ; var b int ; func nested() { var c int ; func deeper() {} ; } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 347))
+
+    def test_valid_funcdecl_99(self):
+        input = "func test99(){};"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 348))
+
+    def test_valid_funcdecl_100(self):
+        input = "func test100() { var alpha int ; var beta int ; func gamma() { } ; } ;"
+        expect = "successful"
+        self.assertTrue(TestParser.checkParser(input, expect, 349))
